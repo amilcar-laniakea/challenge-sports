@@ -1,5 +1,5 @@
 {
-	"name": "cv-generals",
+	"name": "challenge-sports",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -17,7 +17,7 @@
 	},
 	"scripts": {
 		"start": "node server.js",
-		"start:dev": "react-scripts start",
+		"start:dev": "PORT 4000 && react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
