@@ -60,6 +60,7 @@
         <li><a href="#router">Router</a></li>
       </ul>
     </li>
+    <li><a href="#desventajas">Desventajas de usar API Rest</a></li>
     <li><a href="#estilos">Estilos</a></li>
     <li><a href="#contact">Librerias usadas</a></li>
   </ul>
@@ -226,6 +227,11 @@ Liberias del proyecto:
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+## Desventajas
+
+El uso de API Rest para el actual proyecto conlleva desventajas, primero la carga de consultas hace que el tiempo de respuesta y renderizado se incremente notablemente, cosa que no ocurriria con la
+implementacion de la herramienta GraphQL, la cual estoy actualmente revisando y estudiando paa una futura implementacion.
 
 <!-- CONTACT -->
 
