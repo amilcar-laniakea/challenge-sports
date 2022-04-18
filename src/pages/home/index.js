@@ -63,7 +63,6 @@ export default function Home() {
 	useEffect(() => {
 		setMainTitle('People of Star Wars')
 		handleGetList('people', 1)
-		console.log('lol')
 	}, [setMainTitle])
 
 	if (isData === null) return <Error title={'People'} />
@@ -76,7 +75,7 @@ export default function Home() {
 						<div className='sw-home-list-container' ref={handleLastElementRef} onClick={() => handleLinkToDetail(item.url)}>
 							<div>
 								<h3 className='sw-home-list-title'>{item.name}</h3>
-								<h4 className='sw-home-list-description'>{item.gender}</h4>
+								<h4 className='sw-home-list-description'>{item.specie}</h4>
 							</div>
 							<div className='sw-home-spacer' />
 							<RightOutlined className='sw-home-list-icon' />
@@ -85,7 +84,9 @@ export default function Home() {
 						<div className='sw-home-list-container' onClick={() => handleLinkToDetail(item.url)}>
 							<div>
 								<h3 className='sw-home-list-title'>{item.name}</h3>
-								<h4 className='sw-home-list-description'>{item.gender}</h4>
+								<h4 className='sw-home-list-description'>
+									{item.specie} from {item.home}
+								</h4>
 							</div>
 							<div className='sw-home-spacer' />
 							<RightOutlined className='sw-home-list-icon' />

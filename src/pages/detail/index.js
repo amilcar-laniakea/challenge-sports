@@ -16,7 +16,7 @@ import './style.scss'
 export default function Detail() {
 	let params = useParams()
 	const { setMainTitle } = ContextGlobalConsumer()
-	const [isData, setData] = useState({})
+	const [isData, setData] = useState(null)
 	const [isLoading, setLoading] = useState(false)
 
 	useEffect(() => {
@@ -24,7 +24,6 @@ export default function Detail() {
 		GetDetail(params.type, params.id).then((response) => {
 			if (response) {
 				setMainTitle(response.name)
-				console.log('res........', response)
 				setData(response)
 				setLoading(false)
 			}
@@ -58,6 +57,12 @@ export default function Detail() {
 				<div className='sw-detail-description-spacer' />
 				<h4 className='sw-detail-description-subtitle'>{isData.birth_year}</h4>
 			</div>
+			<h3 className='sw-detail-vehicles-title'>Vehicles:</h3>
+			{isData.vehicles_list.map((item, index) => (
+				<h3 className='sw-detail-vehicles-list' key={index}>
+					{item}
+				</h3>
+			))}
 		</div>
 	)
 }
