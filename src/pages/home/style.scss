@@ -1,0 +1,39 @@
+/** @format */
+
+.sw-home-list-container {
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid #eee;
+	cursor: pointer;
+}
+
+.sw-home-list-title {
+	margin: 0;
+	font-size: 15px;
+}
+
+.sw-home-list-description {
+	margin: 0;
+	font-size: 13px;
+	font-weight: 500;
+	color: #aaa;
+	text-transform: capitalize;
+}
+
+.sw-home-list-icon {
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.sw-home-spacer {
+	flex-grow: 1 !important;
+}
+
+.sw-home-loading-container {
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

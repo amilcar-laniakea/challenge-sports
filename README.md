@@ -1,70 +1,270 @@
-# Getting Started with Create React App
+<!-- @format -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://laniakea-store.herokuapp.com">
+    <img src="https://starwarsblog.starwars.com/wp-content/uploads/2015/11/rebel-symbol-300x300.jpg" alt="Logo" width="100" height="auto">
+  </a>
 
-## Available Scripts
+  <h3 align="center">Challenge SW!</h3>
 
-In the project directory, you can run:
+  <p align="center">
+    Star Wars mini-Proyecto
+    <br />
+    <a href=" https://github.com/amilcar-laniakea/challenge-sports.git"><strong>Repositorio</strong></a>
+    <br />
+    <br />
+  </p>
+</p>
 
-### `npm start`
+### Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-  Realizado en React 18;
+-  Estructurado con React Router Dom v6;
+-  Api Usada Start Wars [SW Link](https://swapi.dev/ 'SW Link').;
+-  Tres paginas de prueba para la aplicacion: Home, Detail y not Found;
+-  Libreria SASS incorporada;
+-  Un mini-servidor basado en express para evitar errores de cache de rutas en produccion;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<details open="open">
+  <summary>Contenino</summary>
+  <ul>
+   <li>
+      <a href="#instalacion">Instalacion</a>
+    </li>
+    <li>
+      <a href="#nomenclatura">Nomenclatura</a>
+      <ul>
+        <li><a href="#variables">Variables</a></li>
+        <li>
+          <a href="#funciones">Funciones</a>
+          <ul>
+            <li><a href="#funciones-de-componentes-y-servicios">Funciones de componentes y Servicios</a></li>
+            <li><a href="#funciones-internas-de-componentes">Funciones internas de componentes</a> 
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#estructura">Estructura</a>
+      <ul>
+        <li><a href="#assets">Assets</a></li>
+        <li><a href="#componentes">Componentes</a> 
+          <ul>
+            <li><a href="#servicios">Servicios</a></li>
+          </ul>
+        </li>
+        <li><a href="#context">Context</a></li>
+        <li><a href="#paginas">Paginas</a></li>
+        <li><a href="#router">Router</a></li>
+      </ul>
+    </li>
+    <li><a href="#estilos">Estilos</a></li>
+    <li><a href="#contact">Librerias usadas</a></li>
+  </ul>
+</details>
 
-### `npm test`
+# Instalacion
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-  Ejecuta npm i para instalar las dependencias;
+-  El servidor de escucha predeterminado para la app es el puerto 3030;
 
-### `npm run build`
+# Nomenclatura
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Definimos el tipo de estructura de nombres de variables y funciones como:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Variables
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Las variables estan declaradas en tipo camelcase: Cuando las variables son de tipo Hook, se usa la nomeclantura con prefijo is para la variable como se observa en el ejemplo:
 
-### `npm run eject`
+```javascript
+const [isData, setData] = useState([])
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Funciones
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Las funciones se diferencian de dos tipos de acuerdo al proyecto:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Funciones De Componentes y Servicios
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Con nomenclatura tipo Pascal Case, se usa explicitamente con la palabra funcion de acuerdo con la nomenclatura seguida por AirBnB en dos articulos donde explican que su uso evita problemas como el
+"Error’s call stack":
 
-## Learn More
+<a href='https://airbnb.io/javascript/'>link</a> en el apartado Functions.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```javascript
+export default function ExamplePage() {
+	return (
+		//..
+	)
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Funciones Internas de Componentes
 
-### Code Splitting
+Estas, al igual que las variables, se usan de tipo camelCase, para diferenciales de las funciones padre, ademas que en este caso su nomenclatura esta realizada de tipo variable y con funcion flecha:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```javascript
+const handleGetExample = async (type) => {
+	//...
+}
+```
 
-### Analyzing the Bundle Size
+## Estructura
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+La estructura del proyecto prosigue a continuacion:
 
-### Making a Progressive Web App
+### Assets
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+En los assets se encuentran los recursos estaticos disponibles por el proyecto, en este caso una carpeta imagen con el icono de carga
 
-### Advanced Configuration
+### Componentes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+En los componentes se encuentras los modulos adicionales necesarios para que las paginas de la APP funcionen de manera correcta, en esta encontramos:
 
-### Deployment
+-  La carpeta common, que posee los 3 componentes globales o comunes reutilizados en la app => Error, Header y Loading;
+-  El Layout se usa basicamente para establecer una diferenciacion entre las rutas y los componentes que se necesitan mostrar independientemente de la vista, en este caso el Header o navbar;
+-  Los Servicios, los cuales funcionan como API REST para la consulta tipo GET tanto para procesar la lista necesaria en el home y el detalle del objeto a mostrar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Servicios
 
-### `npm run build` fails to minify
+Los servicios son funciones unicas para exportar en cada componente que procesa una peticion de la APP, esta declaradas en consultas tipo axios.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Context
+
+El Context del proyecto se ubica de manera global ya que solo maneja un solo estado global, el Titulo principal del navbar, en caso de necesitarse mas de un context, se ubucarian el de alcance global
+dentro de una carpeta Global dentro de context y le resto en sus respectivas carpetas.
+
+La estructura del context esta definida por un proveedor, el que hace el manejo de los estados, y el consumidor, que es el que encapsula el o los componentes que necesitaran de su cambio de esdtado
+para su correcto funcionamiento:
+
+```javascript
+export const ContextGlobalProvider = (props) => {
+	const [isExampleVariable, setExampleVariable] = useState('example')
+
+	const value = {
+		isExampleVariable,
+		setExampleVariable,
+	}
+	return <AppContext.Provider value={value} {...props} />
+}
+
+export const ContextGlobalConsumer = () => {
+	const context = useContext(AppContext)
+	if (!context) {
+		throw new Error('ContextConsumer debe estar dentro de proveedor AppContext')
+	}
+	return context
+}
+```
+
+# Paginas
+
+Las paginas son los bloques principales de la app, con estructura ya establecida en el punto funciones principales, de tipo Pascal Case, con su correspondiente archivo de estilo sea tipo css, scss o
+sass:
+
+```javascript
+import './syle.scss'
+
+export default function ExamplePage() {
+	return (
+		//..
+	)
+}
+```
+
+# Router
+
+La carpeta router es el corazon de las rutas de la APP, con una funcion tipo constante, a diferencia del resto de funciones padre con su rutas que manejan la app, asi como la encapsulacion del layout
+donde esta declarada la barra de navegacion principal:
+
+```javascript
+const Routers = () => (
+	<Router>
+		<Layout>
+			<Routes>
+				<Route exact path='detail/:type/:id' element={<Detail />} />
+				<Route exact path='/' element={<Home />} />
+				<Route path='*' element={<NotFound />} />
+			</Routes>
+		</Layout>
+	</Router>
+)
+
+export default Routers
+```
+
+# Estilos
+
+Los estilos estan manejados por la libreria SASS de react, que aunqie su contenido generalmente es igual al de un contenido indistintamente css, para mejoras del mismo se podran usar paletas de
+colores para temas oscuros y variables de colores:
+
+Su estructura generalmente se compone de un prefijo que indica las sigas de la app, en este caso star wars "sw", seguido del nombre de componente o la pagina donde esta alojado, con subsiguiente
+descripcion indicando si es un contenedor, titulo descripcion, sunbitulo o una lista, se recomienda usas hasta 4 anidaciones para lectura sencilla.
+
+El problema con React es que no encamsula el css en componente,s cxomo si lo hacen frameworks que lo potencian como NextJS.
+
+```css
+.sw-page-titlecomponent-subtitlecomponent {
+}
+```
+
+### Built With
+
+Frameword/libraries used:
+
+-  [Ant Design](https://ant.design/)
+-  [Carousels with](https://www.npmjs.com/package/react-awesome-swiper)
+-  [Meta Descriptions](https://www.npmjs.com/package/react-helmet)
+-  [react-router-dom](https://reactrouter.com/web/guides/quick-start)
+-  [node sass](https://www.npmjs.com/package/node-sass)
+
+### Others
+
+Another Libraries what was used in this proyect:
+
+-  [React Awesome Swiper](https://www.npmjs.com/package/react-awesome-swiper)
+-  [Firebase](https://www.npmjs.com/package/firebase)
+
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
+
+### Installation
+
+1. Clone the Project
+2. Make "npm install" for install all dependencies required for the proyect
+3. Do "npm start" for run the proyect
+4. Proyect is listen in por 3000
+
+### Features
+
+1. The Proyect is a basic example of how works a ecommerce website in a react proyect
+2. Have mainly 5 sections or pages: Home, Orders, Categories, Detail Product and Cart component
+3. In Home component or page, we will see a example of slideshow what takes place on the top of the page, next we will se a simple caruosel what displays some ecommerce elements based in the atribute
+   'featured' and last simple text example filled with lorem ipsum.
+4. In the Detail Product, we can see a some atributes and 2 principal components, amount products what validate property the actual stock in firebase database on the current display item, and last the
+   button add, what is disable and no action when its isn't product stock, and when exist, the action button disappear conditionally when takes place the product in the cart.
+5. In the category section, its takes place the filtered products provided for firebase database, for atribute categorie_name, and displays the current items with the respective stock
+6. In Order section, its list all orders created for the success payment in cart mechanic purchase
+7. the Cart Component, It have all the validations needed for manage stock and quantity prices, when takes action the button Pay, One function checks the stock on the cart product, and if one of them
+   doesn't have enough stock, the function return a false and can't process the form payment, in the other hand when is success the stock check, display a form what request the basic info buyer. In
+   the last step, the function what proccess the payment successfully, diminish the stock on all products in the firebase database and clear all the variables involved in the process, including
+   localstorage cart.
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+
+## Contact
+
+About me - [@arkhalem](https://twitter.com/ArKhaleM) - amilcar.laniakea@gmail.com
+
+Project Link: [https://github.com/amilcar-laniakea/laniakea-store](https://github.com/amilcar-laniakea/laniakea-store)
+
+Demo: [https://laniakea-store.herokuapp.com](https://laniakea-store.herokuapp.com)

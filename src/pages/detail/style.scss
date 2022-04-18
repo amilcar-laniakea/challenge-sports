@@ -1,0 +1,36 @@
+/** @format */
+
+.sw-detail-container {
+	padding: 15px;
+}
+
+.sw-detail-title {
+	margin-top: 10px;
+	margin-bottom: 0;
+	padding-bottom: 5px;
+	font-size: 15px;
+}
+
+.sw-detail-description-container {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.sw-detail-description-title {
+	color: #ababab;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.sw-detail-description-spacer {
+	flex-grow: 1 !important;
+}
+
+.sw-detail-description-subtitle {
+	color: #000;
+	font-size: 14px;
+	text-transform: capitalize;
+	margin-bottom: 5px;
+}
